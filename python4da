@@ -1,4 +1,6 @@
-Numpy package 
+#########################################################
+**                 Numpy package                       **
+#########################################################
 In [1]: np.array([True, 1, 2])+ np.array([3, 4, False])
 Out[1]: array([4, 5, 2])
 Reason: True convert to 1, False convert to 0. 
