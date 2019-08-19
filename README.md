@@ -1,2 +1,2 @@
-# beginnerlearning notes - Python
-beginner learning code note
+# Learning & Preparation - CAREER
+learning note
