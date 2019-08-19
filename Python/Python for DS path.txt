@@ -1,0 +1,14 @@
+DATACAMP LEARNING PATH - DS
+
+1. INTRO DATA SCIENCE IN PYTHON
+[DESC]Dive into data science using Python and learn how to effectively analyze and visualize your data.
+
+2. INTERMEDIATE PYTHON FOR DATA SCIENCE
+[DESC]Level up your data science skills by creating visualizations using matplotlib and manipulating data frames with Pandas
+
+3. PYTHONG DATA SCIENCE TOOLBOX
+[DESC] Learn the art of writing your own functions in Python, as well as key concepts like scoping and error handing
+
+4. INTRO TO SQL FOR DATA SCIENCE
+[DESC]Master the basics of querying tables in relational databases usch as MySQL,Oracle, SQL Server, and PostgreSQL
+
