@@ -1,0 +1,40 @@
+Business Analsyt - Routine 
+
+1. DATA ENGINEERING
+   [DESC] Identify data requirements and define data with engineer 
+	* ETL
+	* Build data pipeline
+	* ...
+	* Logging reqirement 
+
+2. DATA REQUESTS
+   [DESC] A/B Test/Analysis/Result Report 
+	* SQL
+	* EXCEL
+	* ...
+	* Reporting
+	* Dashboard
+
+3. DATA RECOMMENDATION 
+   [DESC] Help CEO / Product Manager mind storming 
+	* Exploratory analysis 
+	* A/B Test
+
+4. Data Modeling (Data Science)
+   [DESC] Deep Mining Special User Group
+	* Linear Models
+	* Classification
+	* Clustering 
+
+[SKILL LIST]
+
+1. ETL Tools (Database Schema)
+2. Data Manipulation: MySQL, Teradata, Oracle, Hive
+3. Data Modeling: Python, R, SAS
+4. Data Visualization: Excel, PPT/Tableau, Looker, R Shiny
+5. Special: Adobe Analytics, Salesforce
+6. Soft skills: Summarize data origins and analysis findings, project management methodology, presentation and story-telling skills
+
+[Career Path]
+
+Entry Level BA - Mid-level BA - Senior BA - Enterprise BA/Director - CXO
