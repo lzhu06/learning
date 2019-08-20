@@ -14,7 +14,7 @@ df.info(): number of rows, number of coumns, data types
 Using Logic w/ Data Frame (DF)
 df_name[logical statement]
 *************************************************************************
-**Module: Matplotlib alias plt**
+__Module: Matplotlib alias plt__
 from matplotlib import pyplot as plt
 plt.plot(first positional argument, second positional argument) -> plt.plot is function name
 plt.show() --> display plot
