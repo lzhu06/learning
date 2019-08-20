@@ -1,11 +1,14 @@
 1. INTRODUCTION TO DATA SCIENCE IN PYTHON - Numpy, Pandas, 
+*******************************************************************
+IMPORT DATA 
+*******************************************************************
 pd.read_csv() turns a csv file into a table in Python
 plt.plot(df.x,df.y, label = 'Ransom') turns data into a line plot
     a. Function: plt.plot
     b. Position Arguments: df.x, df.y
     c. Keywork Arguments: label = 'Ransom'
 plt.show() displays plot in a new window
-*************************************************************************
+
 Module: Pandas (work with tabular data that has rows and columns)
 Two data type: floats and strings 
 df.head(): first 5 rows 
@@ -14,6 +17,8 @@ df.info(): number of rows, number of coumns, data types
 Using Logic w/ Data Frame (DF)
 df_name[logical statement]
 *************************************************************************
+CREATE LINE PLOTS
+**************************************************************************
 __Module: Matplotlib alias plt__
 from matplotlib import pyplot as plt
 plt.plot(first positional argument, second positional argument) -> plt.plot is function name
@@ -22,4 +27,36 @@ Axes and title labels:
   plot.xlabel("")
   plot.ylabel("")
   plt.title("")
-Note: anywhere before plt.show()
+ or
+ plt.plot(df.var1,df.var2,label="") 
+ add plt.legend() --> dispay labels 
+  plt.text(xcord,ycord,"Text Message")
+**Note: anywhere before plt.show()**
+*******************************************************************************
+Different type of plot
+*******************************************************************************
+1. Scatter plot: where each data point on graphic, great for unorder points
+    plt.scatter(df.x,df.y)
+    alpha = o.1 --> marker transparency 
+2. Bar Chart: best visual comparison and categorical data 
+    plt.bar(df.x,df.y)
+    plt.ylabel() / plt.xlabel()
+    Adding error bars: yerr=df.error 
+ 3. Stacked bar charts 
+    plt.bar(df.precinct, df.cat,bottom=df.dog)
+    plt.bar(df.precinct,df.dog)
+ 4. Making a histogram: distribution values and data set  
+    plt.hist(data, bins=number_of_bins) -> 10 bins default 
+    plt.hist(data, range=(xmin, xmax)) -> zoom / changing range 
+    Normalizing: make two different size of sample comparable -> plt.hist(data, density=True)
+*******************************************************************************
+Stylish Graphic
+*******************************************************************************
+plt.plot(df.x,df.y, style_arguments)
+plt.style.use("") --> Before any other plotting code 
+
+
+*******************************************************************************
+modules, import data, variables, type of data: str & float, functions (input -> output), 
+pandas (tabular data), select data, creating plots
+
