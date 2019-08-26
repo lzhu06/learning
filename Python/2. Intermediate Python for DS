@@ -2,4 +2,10 @@
 ********************************************************************
 Visualization / Data Structure / Control Structures / Case Study
 ********************************************************************
-Matplotlib: import matplotlib.pyplot as plt
+【0】Loading Packages: Matplotlib: import matplotlib.pyplot as plt
+【1】Histogram: Distribution w/ bins (number of data point in each bins)
+    plt.hist(dataset,bins = #)
+    plt.show()
+    plt.clf() -> cleans it up again so you can start fresh.
+【2】Basic Plot
+      a.line plot: plt.yticks used to name points in the graphic
