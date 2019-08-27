@@ -49,8 +49,18 @@ Visualization / Data Structure / Control Structures / Case Study
               Note: not has a higher priority than and & or, it is executed first.
   5. Filtering Pandas DataFrame
   ***************************************************************************
-          if-elif-else statment & while loop = repeated if statement 
+                                if-elif-else statment 
   ***************************************************************************
+                        while loop = repeated if statement 
+  ****************************************************************************
+                                       for loop
+  ****************************************************************************
+  enumerate: 
   
+  Dictionary:for key, val in my_dict.items():
+  Numpy array: for val in np.nditer(my_array):
+  ******************************************************************************
+  Loop data structure - Part 2
+  ******************************************************************************
+  iterrows 
   
-              
