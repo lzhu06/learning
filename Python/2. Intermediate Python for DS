@@ -45,3 +45,7 @@ Visualization / Data Structure / Control Structures / Case Study
      Row acces [] -> dataset_name[#:#]
       a. loc: dataset_name.loc["xx"]  -> vertical 
       b. loc: dataset_name.loc[["xx"]] -> horizontal 
+  4. Boolean Operators: and, or, not  & np.logical_and, np.logical_or, np.logical_not
+              Note: not has a higher priority than and & or, it is executed first.
+  5. Filtering Pandas DataFrame
+              
