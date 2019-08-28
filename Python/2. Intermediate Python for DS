@@ -55,7 +55,7 @@ Visualization / Data Structure / Control Structures / Case Study
   ****************************************************************************
                                        for loop
   ****************************************************************************
-  enumerate: 
+  enumerate: for multi variables
   
   Dictionary:for key, val in my_dict.items():
   Numpy array: for val in np.nditer(my_array):
