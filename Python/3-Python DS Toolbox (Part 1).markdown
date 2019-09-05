@@ -18,6 +18,7 @@ def func_name(val1,val2):
  	return new_val
 func_name(a,b) 
 ```
+# PART 2: Default arguments, variable-length arguments and scope
 ## Scope and user-defined functions
 ##### Scope:
 * GLobal scope
@@ -58,7 +59,7 @@ func_name(a,b)
 	```
 * Using nonlocal: will change the outer and inner value.
 > Summary: Scope Searched: Local scope, enclosing functions, global, built-in called LEGB rules. 
-##### Practice Example
+###### Practice Example
 * Nested functions
 ```python
 # Define three_shouts
@@ -75,5 +76,6 @@ def three_shouts(word1, word2, word3):
     return (inner(word1),inner(word2),inner(word3))
 
 ```
-# PART 2: Default arguments, variable-length arguments and scope
+##### Default and flexible arguments
+
 # PART 3: Lambda functions and error-handling 
