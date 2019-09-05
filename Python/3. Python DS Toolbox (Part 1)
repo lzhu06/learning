@@ -22,6 +22,14 @@ PART 1: Writting your own functions
     iii. Built-in scope
   b. Nested Functions
      example functions 1：
-        def outer(...)
+     ```
+        def outer(...):
+          """..."""
+          x= ...
+          def inner(...)
+          """..."""
+          y=x**2
+          return ...
+     ```
 PART 2: Default arguments, variable-length arguments and scope
 PART 3: Lambda functions and error-handling 
