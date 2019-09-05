@@ -15,6 +15,13 @@ PART 1: Writting your own functions
     return new_val
     func_name(a,b) 
   b. Tuples:
-    
+[Scope and user-defined functions]
+  a. Scope:
+      i. GLobal scope
+     ii. Local scope
+    iii. Built-in scope
+  b. Nested Functions
+     example functions 1：
+        def outer(...)
 PART 2: Default arguments, variable-length arguments and scope
 PART 3: Lambda functions and error-handling 
