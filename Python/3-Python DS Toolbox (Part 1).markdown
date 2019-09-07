@@ -150,3 +150,124 @@ print(many_words)
 	print(result2)
 ```	
 # PART 3: Lambda functions and error-handling 
+### Lambda functions
+### intro to error handling
+* Passing invalid arguments
+* Errors and exceptions
+* Practice & Example
+   ```python
+   #Error and expectation
+   def sqrt(x):
+   """Returns the square root of a number"""
+      try:
+       return x ** 0.5
+      except Type Error:
+       print('x must be an int or float')
+   ```
+   ```python
+   #Error handling by raising an error
+   def sqrt(x):
+   """Returns the square root of a number"""
+   #Define shout_echo
+   def shout_echo(word1, echo=1):
+    """Concatenate echo copies of word1 and three
+    exclamation marks at the end of the string."""
+    #Raise an error with raise
+    if echo<0:
+        raise ValueError('echo must be greater than 0')
+    #Concatenate echo copies of word1 using *: echo_word
+    echo_word = word1 * echo
+    #Concatenate '!!!' to echo_word: shout_word
+    shout_word = echo_word + '!!!'
+    # Return shout_word
+    return shout_word
+   # Call shout_echo
+   shout_echo("particle", echo=5)
+   ```
+### Bring it all together
+* Example & Practice No.1:filter and check bool value
+   ```python
+   # Select retweets from the Twitter DataFrame: result
+   x=tweets_df['text']
+   result = filter(lambda x: x[0:2]=='RT',x)
+
+   # Create list from filter object result: res_list
+   res_list = list(result)
+
+   # Print all retweets in res_list for tweet in res_list:
+       print(tweet)
+   ```
+* Example & Practice No.2: try-except 
+   ```python
+   # Define count_entries()
+   def count_entries(df, col_name='lang'):
+       """Return a dictionary with counts of
+       occurrences as value for each key."""
+
+       # Initialize an empty dictionary: cols_count
+       cols_count = {}
+
+       # Add try block
+       try:
+           # Extract column from DataFrame: col
+           col = df[col_name]
+        
+           # Iterate over the column in dataframe
+           for entry in col:
+    
+               # If entry is in cols_count, add 1
+               if entry in cols_count.keys():
+                   cols_count[entry] += 1
+               # Else add the entry to cols_count, set the value to 1
+               else:
+                   cols_count[entry] = 1
+     
+           # Return the cols_count dictionary
+           return cols_count
+
+       # Add except block
+       except TypeError:
+           print('The DataFrame does not have a ' + col_name + 'column.')
+
+   # Call count_entries(): result1
+   result1 = count_entries(tweets_df, 'lang')
+
+   # Print result1
+   print(result1)
+   ```
+ * Example & Practice No.3: Raise an error
+    ```python
+       # Define count_entries()
+   def count_entries(df, col_name='lang'):
+       """Return a dictionary with counts of
+       occurrences as value for each key."""
+    
+       # Raise a ValueError if col_name is NOT in DataFrame
+       if col_name not in df.columns:
+           raise ValueError('The DataFrame does not have a '+ col_name+' column.')
+
+       # Initialize an empty dictionary: cols_count
+       cols_count = {}
+    
+       # Extract column from DataFrame: col
+       col = df[col_name]
+    
+       # Iterate over the column in DataFrame
+       for entry in col:
+
+           # If entry is in cols_count, add 1
+           if entry in cols_count.keys():
+               cols_count[entry] += 1
+               # Else add the entry to cols_count, set the value to 1
+           else:
+               cols_count[entry] = 1
+        
+           # Return the cols_count dictionary
+       return cols_count
+
+   # Call count_entries(): result1
+   result1 = count_entries(tweets_df, col_name='lang')
+
+   # Print result1
+   print(result1)
+    ```
