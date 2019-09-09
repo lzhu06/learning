@@ -36,3 +36,10 @@
     LEFT JOIN TABLE2 AS P2
     ON P1.COUNTRY = P2.COUNTRY;
     ```
+ 1. RIGHT JOIN: keep all columns and values in the right table and matching the value in the left table. For non-matching value, will show missing / empty vlue. Syntax as follow:
+    ```SQL
+    SELECT P1.COUNTRY, COL_NAME, COL_NAME2
+    FROM TABLE1 AS P1
+    RIGHT JOIN TABLE2 AS P2
+    ON P1.COUNTRY = P2.COUNTRY;
+    ```
