@@ -54,3 +54,6 @@ ADD col_name_new datatype;
 1. Attribute constraints 
 1. Key constraints
 1. Referential integrity constraints 
+###### Dealing with data types (casting)
+1. CAST (COL_NAME AS data_type)
+###### Working with data types
