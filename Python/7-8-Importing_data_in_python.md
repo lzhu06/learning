@@ -86,3 +86,89 @@ plt.xlabel('Age (years)')
 plt.ylabel('count')
 plt.show()
 ```
+#### Importing other file types
+* Pickled files
+```python
+import pickle
+with open ('','rb') as file:
+    data = pickle.load(file)
+print(data)
+```
+* importing Excel Spreadshetts
+```python
+import pandas as pd
+file = 'file.xlsx'
+data = pd.ExcelFile(file)
+print(data.sheet_names)
+df1 = data.parse('1960-1966')
+df2 = data.parse(0)
+```
+>Example:
+```python
+# Import pandas
+import pandas as pd
+
+# Assign spreadsheet filename: file
+file = 'battledeath.xlsx'
+
+# Load spreadsheet: xl
+xls = pd.ExcelFile(file)
+
+# Print sheet names
+print(xls.sheet_names)
+```
+#### Importing SAS/Stata files
+> SAS files: 
+  ```python
+  import pandas as pd
+  from sas7bdat import SAS7BDAT
+  with SAS7BDAT('file_name.sas7bdat') as file:
+        df_sas = file.to_data_frame()
+  ```
+> Stata files:
+  ```python
+  import pandas as pd
+  data = pd.read_stata('file_name.dta')
+  ```
+> HDF5 files: large quantities of numerical data - 100 gb or larter
+  ```python
+  import h5py
+  filename = 'file_name.hdf5'
+  data = h5py.File(filename, 'r') # 'r' is to read
+  print(type(data))
+  
+  for key in data.keys():
+     print(key)
+  #Example
+  for key in data['meta'].keys():
+      print(key)
+  ```
+  * Example:
+  ```python
+  # Import packages
+import numpy as np
+import h5py
+
+# Assign filename: file
+file = 'LIGO_data.hdf5'
+
+# Load file: data
+data = h5py.File(file, 'r')
+
+# Print the datatype of the loaded file
+print(type(data))
+
+# Print the keys of the file
+for key in data.keys():
+    print(key)
+  ```
+#### Importing MATLAB
+```python
+scipy.io.loadmat() - read .mat files
+scipy.io.savemat() - write .mat files
+
+import scipy.io
+filename = 'file.mat'
+mat = scipy.io.loadmat(filename)
+print(type(mat))
+```
