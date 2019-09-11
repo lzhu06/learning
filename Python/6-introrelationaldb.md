@@ -57,3 +57,55 @@ ADD col_name_new datatype;
 ###### Dealing with data types (casting)
 1. CAST (COL_NAME AS data_type)
 ###### Working with data types
+1. Keys and superkeys - keep uniqueness 
+1. Primary Keys - referal to other table & unique
+   ```sql
+   -- Specifying primary keys
+   CREATE TABLE products (
+       product_no integer UNIQUE NOT NULL,
+       name text,
+       price numeric
+   );
+   CREATE TABLE products (
+       product_no integer PRIMARY KEY,
+       name text,
+       price numeric
+   );
+   CREATE TABLE products (
+      a integer,
+      b integer,
+      c integer,
+      PRIMARY KEY (a,c) -- combinationa of two coloumns as primary key
+   );
+   -- Add primary key constraints 
+   ALTER TABLE table_name
+   ADD CONSTRAINT some_name PRIMARY KEY (column_name)
+   ```
+1. Surrogate Keys
+   ```sql
+   ALTER TABLE table_name
+   ADD COLUMN column_c varchar(256);
+   
+   UPDATE table_name
+   SET column_c = CONCAT(column_a, column_b); - contact groups 
+   
+   ALTER TABLE table_name
+   ADD CONSTRAINT pk PRIMARY KEY (column_c)；
+   ```
+##### Model1: N relationships with foreign keys
+```sql
+-- Select all professors working for universities in the city of Zurich
+SELECT professors.lastname, universities.id, universities.university_city
+from professors
+join universities
+ON professors.university_id = universities.id
+where universities.university_city = 'Zurich';
+```
+###### More complex relationships 
+###### Referential integrity 
+1. DELETE NO ACTION - trigger errors if delete value in b but referenced by a. Throw an error.
+1. DELECT CASCADE - trigger deletion in both table b and a. Delete all referencing records.
+1. RESTRICT: Throw an error
+1. SET NULL: set the referencing column to null
+1. SET DEFAULT: Set the referencing column to its default value
+###### Roundup
