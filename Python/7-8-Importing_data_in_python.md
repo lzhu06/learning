@@ -172,3 +172,78 @@ filename = 'file.mat'
 mat = scipy.io.loadmat(filename)
 print(type(mat))
 ```
+#### Creating a database engine 
+* SQLAlchemy
+```python
+from sqlalchemy import create_engine
+engine = create_engine('sqlite://northwind.sqlite')
+
+table_names = engine.table_names() #Including all table names
+```
+>Example:
+```python
+# Import necessary module
+from sqlalchemy import create_engine
+
+# Create engine: engine
+engine = create_engine('sqlite:///Chinook.sqlite')
+
+# Save the table names to a list: table_names
+table_names = engine.table_names()
+
+# Print the table names to the shell
+print(table_names)
+```
+* Querying relational database in python
+```python
+#your first sql query
+
+from sqlalchemy import create_engine
+import pandas as pd
+engine = create_engine('sqlite:///northwind.sqlite')
+con = engine.connect()
+rs = con.execute("SELECT * FROM Orders")
+df = pd.DataFrame(rs.fetchall())
+df.columns = rs.keys()
+con.close()
+print(head())
+```
+>Example_1
+```python
+# Import packages
+from sqlalchemy import create_engine
+import pandas as pd
+
+# Create engine: engine
+engine = create_engine('sqlite:///Chinook.sqlite')
+
+# Open engine connection: con
+con = engine.connect()
+
+# Perform query: rs
+rs = con.execute("select * from Album")
+
+# Save results of the query to DataFrame: df
+df = pd.DataFrame(rs.fetchall())
+
+# Close connection
+con.close()
+```
+>Exampe_2
+```python
+# Open engine in context manager
+# Perform query and save results to DataFrame: df
+with engine.connect() as con:
+    rs = con.execute("SELECT LastName, Title from Employee")
+    df = pd.DataFrame(rs.fetchmany(3))
+    df.columns = rs.keys()
+
+# Print the length of the DataFrame df
+print(len(df))
+
+# Print the head of the DataFrame df
+print(df.head())
+
+df = pd.read_sql_query("SELECT * FROM Orders", engine)
+```
+
