@@ -247,4 +247,11 @@ print(df.head())
 df = pd.read_sql_query("SELECT * FROM Orders", engine)
 ```
 ##### Import data from Web
+* urllib: urlopen() - accept url instead of files
+  ```python
+  from urllib.request import urlretrieve
+  url = 'http://link.csv'
+  urlretrieve(url, 'filename.csv')
+  ```
+
 
