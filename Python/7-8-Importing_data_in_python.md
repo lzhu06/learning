@@ -253,5 +253,30 @@ df = pd.read_sql_query("SELECT * FROM Orders", engine)
   url = 'http://link.csv'
   urlretrieve(url, 'filename.csv')
   ```
+ 
+ #### Retriving data from open database (API & JSON)
+ ```python
+#Retriving data from web portal 
+import requests
+ url = 'open_source_url'
+ r = requests.get(url)
+ json_data = r.json()
+ for key, value in json_data.items():
+      print(key + ':', value)
+ #Example of URL
+ #'http://www.omdbapi.com/?t=hackers' Retrun data for a movie with title(t) 'Hackers'
+ #following is the example
+ # Import requests package
+import requests
+
+# Assign URL to variable: url
+url = 'http://www.omdbapi.com/?apikey=72bc447a&t=the+social+network'
+
+# Package the request, send the request and catch the response: r
+r = requests.get(url)
+
+# Print the text of the response
+print(r.text)
+ ```
 
 
