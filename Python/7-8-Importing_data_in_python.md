@@ -256,6 +256,7 @@ df = pd.read_sql_query("SELECT * FROM Orders", engine)
  
  #### Retriving data from open database (API & JSON)
  ```python
+ 
 #Retriving data from web portal 
 import requests
  url = 'open_source_url'
@@ -278,5 +279,47 @@ r = requests.get(url)
 # Print the text of the response
 print(r.text)
  ```
+##### API Authentication - TWITTER 
+```python
+# Import package
+import json
 
+# String of path to file: tweets_data_path
+tweets_data_path = 'tweets.txt'
 
+# Initialize empty list to store tweets: tweets_data
+tweets_data=[]
+
+# Open connection to file
+tweets_file = open(tweets_data_path, "r")
+
+# Read in tweets and store in list: tweets_data
+for line in tweets_file:
+    tweet = json.loads(line)
+    tweets_data.append(tweet)
+
+# Close connection to file
+tweets_file.close()
+
+# Print the keys of the first tweet dict
+print(tweets_data[0].keys())
+
+```
+>Example-1
+```python
+# Import packages
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set seaborn style
+sns.set(color_codes=True)
+
+# Create a list of labels:cd
+cd = ['clinton', 'trump', 'sanders', 'cruz']
+
+# Plot histogram
+ax = sns.barplot(cd, [clinton,trump,sanders,cruz])
+ax.set(ylabel="count")
+plt.show()
+
+```
