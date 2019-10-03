@@ -1,2 +1,2 @@
-# Learning & Preparation - CAREER
+# Learning & Preparation 
 learning note
